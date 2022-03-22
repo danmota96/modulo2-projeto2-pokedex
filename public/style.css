@@ -32,12 +32,14 @@ section#list{
     justify-content: space-evenly;
     margin-top: 7rem;
     flex-wrap: wrap;
+
 }
 
 section#list div.card{
     width: 20rem;
     box-shadow: 5px 5px 5px 5px rgb(128, 125, 125);
     padding: 2rem;
+    margin-top: 1.5rem;
 }
 
 section#list div.card img{
@@ -54,19 +56,19 @@ section#list div.card p.spec{
     margin-top: 1rem;
 }
 
-section#regist{
+section#registry{
     display: flex;
     justify-content: center;
     flex-wrap: wrap; 
     padding: 4rem;
-    background-color: gray;
+     
 }
 
-section#regist h2{
+section#registry h2{
     padding: 2rem;
 }
 
-section#regist form input{
+section#registry form input{
     width: 100%;
     padding: 1rem;
     outline: none;
@@ -75,12 +77,12 @@ section#regist form input{
     
 }
 
-section#regist form label{
+section#registry form label{
    margin-top: 1rem;
     
 }
 
-section#regist form button{
+section#registry form button{
     font-size: 1rem;
     display: flex;
     width: 20%;

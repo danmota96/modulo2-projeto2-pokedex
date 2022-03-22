@@ -20,6 +20,13 @@ app.post("/add", (req,res) =>{
   pokedex.push(pokemon);
   console.log(pokemon);
   res.redirect("/");
+  pokemon.id = pokedex.length + 1;
+})
+
+app.get("/details/:id", (req,res) => {
+  const id = +req.params.id;
+  pokemon = pokedex.find((pokemon) => pokemon.id === id);
+  res.redirect("/");
 })
 
 app.listen(port, () =>
