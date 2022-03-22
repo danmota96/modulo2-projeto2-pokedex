@@ -1,0 +1,26 @@
+{
+  "name": "pokedex-mvc",
+  "version": "1.0.0",
+  "description": "Projeto 2 - Módulo 2 - Pokedex",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dandanm2/modulo2-projeto2-pokedex.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandanm2/modulo2-projeto2-pokedex/issues"
+  },
+  "homepage": "https://github.com/dandanm2/modulo2-projeto2-pokedex#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "ejs": "^3.1.6"
+  }
+  
+}

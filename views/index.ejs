@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+      <title>Landing Page</title>
+</head>
+<body>
+    <header>   
+        <h1>POKEDEX - LOGO</h1>
+    </header>
+    
+    
+    <div>
+        <h1>Pokemon List</h1>
+    </div>
+    
+    <section id="list">
+        
+
+        <% pokedex.forEach((pokemon) => { %>          
+        <div class="card">
+            <img src="<%= pokemon.img %>" alt=""> 
+                      
+            <h3 > <%=pokemon.id%> - <%= pokemon.name %> </h3>
+            <p class="spec">CATEGORY: <%= pokemon.category %></p>
+            <p class="spec">DESCRIPTION: <%= pokemon.description %> </p>
+            <p class="spec">SKILL: <%= pokemon.skill %> </p>
+            <p class="spec">TYPE: <%= pokemon.type %> </p>
+            <p class="spec">HEIGHT: <%= pokemon.height %> </p>
+            <p class="spec">WEIGHT: <%= pokemon.weight %> </p>
+   
+        </div>
+    <%  })   %> 
+    </section>
+
+    <section id="regist">
+        <h2>Register your Pokemon</h2>
+        <form action="/add" method="POST">
+            <div>
+                <label for="Name">Name:</label>
+                <input type="text" name="name" id="name" placeholder="Pokemon name">
+
+                <label for="Category">Category:</label>
+                <input type="text" name="category" id="category" placeholder="Pokemon category (seed, fire...)">
+
+                <label for="Description">Description:</label>
+                <input type="text" name="description" id="description" placeholder="Pokemon description">
+                 
+                <label for="Skill">Abilities:</label>
+                <input type="text" name="abilities" id="abilities" placeholder="Pokemon ability (overgrow, blaze...)">
+
+                <label for="Type">Type:</label>
+                <input type="text" name="type" id="type" placeholder="Pokemon type (flying, electric...)">
+
+                <label for="Height">Height:</label>
+                <input type="number" name="height" id="height">
+                
+                <label for="Weight">Weight:</label>
+                <input type="number" name="weight" id="weight">
+
+                <label for="img">Picture</label>
+                <input type="text" name="img" id="img" placeholder="Use image URL">
+
+                <button id="btnRegist" type="submit">REGISTER</button>
+            </div>
+        </form>
+    </section>
+</body>
+</html>
