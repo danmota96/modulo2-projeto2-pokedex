@@ -1,10 +1,12 @@
 //importação
 const express = require("express");
 const { set } = require("express/lib/application");
+const { get } = require("express/lib/response");
 const path = require("path");
 
+
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
@@ -17,20 +19,32 @@ app.get("/", (req, res) => {
 //ROUTE TO RECEIVE POKEMON DATA REGISTERED BY USER
 app.post("/add", (req,res) =>{
   const pokemon = req.body;
+  pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
   console.log(pokemon);
-  res.redirect("/");
-  pokemon.id = pokedex.length + 1;
-})
+  res.redirect("/#card");
+});
 
-app.get("/details/:id", (req,res) => {
-  const id = +req.params.id;
-  pokemon = pokedex.find((pokemon) => pokemon.id === id);
-  res.redirect("/");
-})
+
+//BOTÃO TESTE
+app.get("/details/:id", (req, res) => {
+  const id = req.params.id;
+  const pokemon = pokedex[id-1];
+  res.render("details.ejs", { pokemon:pokemon });
+});
+
+
+//DELETE KEY
+app.get("/delete/:id", (req, res) => {
+  const id = +req.params.id - 1;
+  delete pokedex[id];
+  res.redirect("/#cards");
+});
+
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
+  
 );
 
 

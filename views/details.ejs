@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+      <title>Landing Page</title>
+</head>
+<body>
+    <nav>
+        <li>
+            <h1> Pokédex LOGO</h1>
+        </li>
+        <li><a href="#registry">Register your Pokemon</a></li>
+        
+        <li><a href="#list">Pokemons</a></li>
+     
+    </nav>
+    
+    
+  
+    <div>
+        <h2>Pokemon List</h2>
+    </div>   
+    <section id="list">
+        
+
+        <% pokedex.forEach((pokemon) => { %>          
+        <div class="card">
+            <img src="<%= pokemon.img %>" alt=""> 
+                      
+            <h3 > <%=pokemon.id%> - <%= pokemon.name %> </h3>
+            <p class="spec">CATEGORY: <%= pokemon.category %></p>
+            <p class="spec">DESCRIPTION: <%= pokemon.description %> </p>
+            <p class="spec">SKILL: <%= pokemon.skill %> </p>
+            <p class="spec">TYPE: <%= pokemon.type %> </p>
+            <p class="spec">HEIGHT: <%= pokemon.height %> </p>
+            <p class="spec">WEIGHT: <%= pokemon.weight %> </p>
+
+        </div>
+
+
+        
+</body>
+</html>
