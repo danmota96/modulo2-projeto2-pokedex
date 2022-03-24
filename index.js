@@ -26,20 +26,23 @@ app.post("/add", (req,res) =>{
 });
 
 
-//BOTÃO TESTE
+//BUTTONS "DETAILS", "DELETE" , "BACK"
 app.get("/details/:id", (req, res) => {
   const id = req.params.id;
   const pokemon = pokedex[id-1];
+  console.log("teste");
   res.render("details.ejs", { pokemon:pokemon });
 });
 
-
-//DELETE KEY
 app.get("/delete/:id", (req, res) => {
   const id = +req.params.id - 1;
   delete pokedex[id];
   res.redirect("/#cards");
 });
+
+app.get("/", (req,res) =>{
+  res.redirect("/");
+})
 
 
 app.listen(port, () =>
