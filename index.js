@@ -1,9 +1,8 @@
-//importação
+//IMPORT
 const express = require("express");
 const { set } = require("express/lib/application");
 const { get } = require("express/lib/response");
 const path = require("path");
-
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -14,10 +13,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
-  res.render("index", { pokedex});
+  res.render("index", { pokedex });
 });
+
 //ROUTE TO RECEIVE POKEMON DATA REGISTERED BY USER
-app.post("/add", (req,res) =>{
+app.post("/add", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
@@ -25,13 +25,12 @@ app.post("/add", (req,res) =>{
   res.redirect("/#card");
 });
 
-
 //BUTTONS "DETAILS", "DELETE" , "BACK"
 app.get("/details/:id", (req, res) => {
   const id = req.params.id;
-  const pokemon = pokedex[id-1];
+  const pokemon = pokedex[id - 1];
   console.log("teste");
-  res.render("details.ejs", { pokemon:pokemon });
+  res.render("details.ejs", { pokemon: pokemon });
 });
 
 app.get("/delete/:id", (req, res) => {
@@ -40,27 +39,26 @@ app.get("/delete/:id", (req, res) => {
   res.redirect("/#cards");
 });
 
-app.get("/", (req,res) =>{
+app.get("/", (req, res) => {
   res.redirect("/");
-})
-
+});
 
 app.listen(port, () =>
   console.log(`Servidor rodando em http://localhost:${port}`)
-  
 );
 
-
+//Array
 const pokedex = [
   {
     id: 1,
     name: "Bulbasaur",
     category: "Seed",
     abilities: "Overgrow",
-    height: "0.7 m" ,
-    weight: "6.9 kg" ,
+    height: "0.7 m",
+    weight: "6.9 kg",
     type: "Grass",
-    description: "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger",
+    description:
+      "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger",
     img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png",
   },
   {
@@ -68,10 +66,11 @@ const pokedex = [
     name: "Charmander",
     category: "Lizard",
     abilities: "Blaze",
-    height: "0.7 m" ,
-    weight: "6.9 kg" ,
+    height: "0.7 m",
+    weight: "6.9 kg",
     type: "Fire",
-    description: "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
+    description:
+      "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
     img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png",
   },
   {
@@ -79,10 +78,11 @@ const pokedex = [
     name: "Pidgey",
     category: "Tiny Bird",
     abilities: "Tangled Feet",
-    height: "0.3 m" ,
-    weight: "1.8 kg" ,
+    height: "0.3 m",
+    weight: "1.8 kg",
     type: "Flying",
-    description: "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back. ",
+    description:
+      "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back. ",
     img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png",
   },
   {
@@ -90,11 +90,11 @@ const pokedex = [
     name: "Pikachu",
     category: "Mouse",
     abilities: "Static",
-    height: "0.7 m" ,
-    weight: "6.9 kg" ,
+    height: "0.7 m",
+    weight: "6.9 kg",
     type: "Electric",
-    description: "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
+    description:
+      "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
     img: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
   },
 ];
-

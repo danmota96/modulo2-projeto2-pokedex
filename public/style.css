@@ -27,6 +27,7 @@ nav li {
 nav li a {
   text-decoration: none;
   color: white;
+  font-size: 1.5rem;
 }
 
 main {
@@ -66,13 +67,29 @@ section#registry form label {
 }
 
 section#registry form button {
-  font-size: 1rem;
+  padding: 0.6rem;
   display: flex;
-  width: 20%;
-  padding: 0.7rem;
   justify-content: center;
   margin: 0 auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #0077ff;
+  color: #0077ff;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 2rem;
+  box-sizing: border-box;
+  border-radius: 16px;
+  
 }
+
+
+section#registry form button:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
 section#list {
   display: flex;
   justify-content: space-evenly;
@@ -109,6 +126,11 @@ section#list div.card a#details {
   border-radius: 16px;
 }
 
+section#list div.card a#details:hover {
+  background-color: #0077ff;
+  color: #fff;
+}
+
 section#list div.card a#delete {
   padding: 0.6rem;
   display: flex;
@@ -124,11 +146,6 @@ section#list div.card a#delete {
   border: 1px solid #000000;
   box-sizing: border-box;
   border-radius: 16px;
-}
-
-section#list div.card a#details:hover {
-  background-color: #0077ff;
-  color: #fff;
 }
 
 section#list div.card a#delete:hover {
@@ -192,3 +209,6 @@ footer p a {
   color: #fff;
   font-weight: 600;
 }
+
+
+
