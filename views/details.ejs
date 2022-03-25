@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
-    
-      <title>Landing Page</title>
-</head>
-<body>
-    <nav>
-        <img src="./img/pokedex-logo.png" alt="error">
-    </nav> 
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>Landing Page</title>
+  </head>
+  <body>
+    <nav></nav>
     <div>
-        <h2>Detail: <%= pokemon.name %> </h2>
-    </div>   
+      <h2>Detail: <%= pokemon.name %></h2>
+    </div>
     <section id="list">
-                     
-        <div class="card">
-              
-            <img src="<%= pokemon.img %>" alt=""> 
-                      
-            <p class="spec">CATEGORY: <%= pokemon.category %></p>
-            <p class="spec">DESCRIPTION: <%= pokemon.description %> </p>
-            <p class="spec">TYPE: <%= pokemon.type %> </p>
-            <p class="spec">HEIGHT: <%= pokemon.height %> </p>
-            <p class="spec">WEIGHT: <%= pokemon.weight %> </p>
-            <a id="back" href="/" >BACK</a> 
-        </div>
-       
+      <div class="card">
+        <img src="<%= pokemon.img %>" alt="" />
+
+        <p class="spec">CATEGORY: <%= pokemon.category %></p>
+        <p class="spec">DESCRIPTION: <%= pokemon.description %></p>
+        <p class="spec">TYPE: <%= pokemon.type %></p>
+        <p class="spec">HEIGHT: <%= pokemon.height %> m</p>
+        <p class="spec">WEIGHT: <%= pokemon.weight %> kg</p>
+        <a id="back" href="/">BACK</a>
+      </div>
     </section>
     <footer>
-        <p>All rights reserved  &copy;</p>
-        <p>Data collected from <a target="_blank" href="https://www.pokemon.com/br/pokedex/">Pokédex</a></p>
-    </footer> 
-</body>
+      <p>All rights reserved &copy;</p>
+      <p>
+        Data collected from
+        <a target="_blank" href="https://www.pokemon.com/br/pokedex/"
+          >Pokédex</a
+        >
+      </p>
+    </footer>
+  </body>
 </html>

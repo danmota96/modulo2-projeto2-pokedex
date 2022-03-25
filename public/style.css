@@ -81,9 +81,7 @@ section#registry form button {
   margin-top: 2rem;
   box-sizing: border-box;
   border-radius: 16px;
-  
 }
-
 
 section#registry form button:hover {
   background-color: #0077ff;
@@ -209,6 +207,3 @@ footer p a {
   color: #fff;
   font-weight: 600;
 }
-
-
-

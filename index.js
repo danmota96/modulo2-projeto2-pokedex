@@ -54,8 +54,8 @@ const pokedex = [
     name: "Bulbasaur",
     category: "Seed",
     abilities: "Overgrow",
-    height: "0.7 m",
-    weight: "6.9 kg",
+    height: 0.7,
+    weight: 6.9,
     type: "Grass",
     description:
       "There is a plant seed on its back right from the day this Pokémon is born. The seed slowly grows larger",
@@ -66,8 +66,8 @@ const pokedex = [
     name: "Charmander",
     category: "Lizard",
     abilities: "Blaze",
-    height: "0.7 m",
-    weight: "6.9 kg",
+    height: 0.6,
+    weight: 8.5,
     type: "Fire",
     description:
       "It has a preference for hot things. When it rains, steam is said to spout from the tip of its tail.",
@@ -78,8 +78,8 @@ const pokedex = [
     name: "Pidgey",
     category: "Tiny Bird",
     abilities: "Tangled Feet",
-    height: "0.3 m",
-    weight: "1.8 kg",
+    height: 0.3,
+    weight: 1.8,
     type: "Flying",
     description:
       "Very docile. If attacked, it will often kick up sand to protect itself rather than fight back. ",
@@ -90,8 +90,8 @@ const pokedex = [
     name: "Pikachu",
     category: "Mouse",
     abilities: "Static",
-    height: "0.7 m",
-    weight: "6.9 kg",
+    height: 0.4,
+    weight: 6,
     type: "Electric",
     description:
       "Pikachu that can generate powerful electricity have cheek sacs that are extra soft and super stretchy.",
