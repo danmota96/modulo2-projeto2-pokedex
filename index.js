@@ -9,7 +9,6 @@ const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
-//USER WILL SEND INPUT DATA BY DOCUMENT (JSON)
 app.use(express.urlencoded());
 
 app.get("/", (req, res) => {
@@ -29,7 +28,6 @@ app.post("/add", (req, res) => {
 app.get("/details/:id", (req, res) => {
   const id = req.params.id;
   const pokemon = pokedex[id - 1];
-  console.log("teste");
   res.render("details.ejs", { pokemon: pokemon });
 });
 
@@ -44,7 +42,7 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, () =>
-  console.log(`Servidor rodando em http://localhost:${port}`)
+  console.log(`Server running in http://localhost:${port}`)
 );
 
 //Array
