@@ -11,9 +11,7 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded());
 
-app.get("/", (req, res) => {
-  res.render("index", { pokedex });
-});
+
 
 //ROUTE TO RECEIVE POKEMON DATA REGISTERED BY USER
 app.post("/add", (req, res) => {
@@ -24,7 +22,11 @@ app.post("/add", (req, res) => {
   res.redirect("/#card");
 });
 
-//BUTTONS "DETAILS", "DELETE" , "BACK"
+//ROUTES
+app.get("/", (req, res) => {
+  res.render("index", { pokedex });
+});
+
 app.get("/details/:id", (req, res) => {
   const id = req.params.id;
   const pokemon = pokedex[id - 1];
@@ -35,6 +37,10 @@ app.get("/delete/:id", (req, res) => {
   const id = +req.params.id - 1;
   delete pokedex[id];
   res.redirect("/#cards");
+});
+
+app.get("/register/",(req,res) => {
+  res.render("register.ejs");
 });
 
 app.get("/", (req, res) => {

@@ -194,6 +194,28 @@ footer {
   margin-top: 2rem;
 }
 
+section#registry a#back {
+  padding: 0.6rem;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #ff0000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 16px;
+  width: 6%;
+}
+section#registry a#back:hover {
+  background-color: #ff0000;
+  color: #fff;
+}
+
 footer p {
   width: 100%;
   color: #fff;

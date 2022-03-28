@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+
+    <title>Pokédex - Project 2 - Blue</title>
+  </head>
+  <body>
+    <nav>
+      <img src="./img/pokedex-logo.png" alt="" />
+      <li><a href="#registry">Register your Pokemon</a></li>
+
+      <li><a href="/">Pokemons</a></li>
+    </nav>
+
+    <section id="registry">
+      <h2>Register your Pokemon</h2>
+      <form action="/add" method="POST">
+        <img class="pkdex" src="./img/pkdex1.png" alt="error1" />
+        <img class="pkdex" src="./img/pkdex2.png" alt="error1" />
+        <div>
+          <label for="Name">Name:</label>
+          <input type="text" name="name" id="name" placeholder="Pokemon name" />
+
+          <label for="Category">Category:</label>
+          <input
+            type="text"
+            name="category"
+            id="category"
+            placeholder="Pokemon category (seed, fire...)"
+          />
+
+          <label for="Description">Description:</label>
+          <input
+            type="text"
+            name="description"
+            id="description"
+            placeholder="Pokemon description"
+          />
+
+          <label for="Skill">Abilities:</label>
+          <input
+            type="text"
+            name="abilities"
+            id="abilities"
+            placeholder="Pokemon ability (overgrow, blaze...)"
+          />
+
+          <label for="Type">Type:</label>
+          <input
+            type="text"
+            name="type"
+            id="type"
+            placeholder="Pokemon type (flying, electric...)"
+          />
+
+          <label for="Height">Height (m):</label>
+          <input type="number" name="height" id="height" />
+
+          <label for="Weight">Weight (kg):</label>
+          <input type="number" name="weight" id="weight" />
+
+          <label for="img">Picture</label>
+          <input type="text" name="img" id="img" placeholder="Use image URL" />
+
+          <button id="btnRegist" type="submit">REGISTER</button>
+          <a id="back" href="/">BACK</a>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      <p>All rights reserved &copy;</p>
+      <p>
+        Data collected from
+        <a target="_blank" href="https://www.pokemon.com/br/pokedex/"
+          >Pokédex</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
