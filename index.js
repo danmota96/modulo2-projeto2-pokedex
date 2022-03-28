@@ -18,7 +18,6 @@ app.post("/add", (req, res) => {
   const pokemon = req.body;
   pokemon.id = pokedex.length + 1;
   pokedex.push(pokemon);
-  console.log(pokemon);
   res.redirect("/#card");
 });
 
